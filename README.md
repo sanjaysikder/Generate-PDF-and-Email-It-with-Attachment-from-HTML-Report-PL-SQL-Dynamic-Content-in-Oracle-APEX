@@ -179,7 +179,7 @@ function generatePDFWithSendEmail() {
 
 ```
 
-## 4. 📥 Download PDF and and Email It with Attachment via Dynamic Action (Click Button)
+## 4. 📥 Download PDF and Email It with Attachment via Dynamic Action (Click Button)
 
 ### ✅ Step-by-Step:
 
