@@ -16,7 +16,7 @@ This guide helps you integrate a **"Download Word"** feature in your Oracle APEX
    - #APP_FILES#html2pdf.bundle.min.js
 
 ---
-## 🧠 2. Add JavaScript to Page-Level Global Variable Function
+## 🧠 2. Add This Static File URL to Page HTML Header
 
  - Add This Static File to Page HTML Header.
 ```HTML Header
