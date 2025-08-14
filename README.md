@@ -26,19 +26,18 @@ This guide helps you integrate a **"Generate PDF and Email it with Attachment"**
 ## 🧠 3. Create ajax callback Process give it a name (STORE_PDF)
 
 ```pl/sql code
+
 DECLARE
   l_collection_name VARCHAR2(100) := 'GENERATE_PDF';
   l_blob            BLOB;
   l_filename        VARCHAR2(100);
   l_mime_type       VARCHAR2(100);
   l_token           VARCHAR2(32000);
-  
-   email_id number;
-     l_body_html VARCHAR2(32767);
-   begin
+  email_id number;
+  l_body_html VARCHAR2(32767);
+begin
 BEGIN
   -- Get mime type from x01 or default to 'image/png'
-  --l_mime_type := NVL(apex_application.g_x01, 'image/png');
   l_mime_type := NVL(apex_application.g_x02, 'application/pdf');
   -- Create filename based on the current date and time
   l_filename := 'Invoice-' ||
@@ -55,7 +54,7 @@ BEGIN
   
   -- Create a temporary BLOB to store the decoded image data
   DBMS_LOB.createtemporary(l_blob, FALSE, DBMS_LOB.SESSION);
-  
+ 
   -- Decode the base64 strings in the f01 array and append them to the BLOB
   FOR i IN 1 .. apex_application.g_f01.COUNT LOOP
     l_token := wwv_flow.g_f01(i);
@@ -99,14 +98,9 @@ BEGIN
         apex_json.write('success', false);
         apex_json.close_object;
         RAISE;
-
-
-
      apex_application.g_print_success_message := '<span>The email has been sent successfully to  '||:P84_EMAIL||'</span>';
 --apex_collection.truncate_collection('GENERATE_PDF') ;
-      
-  end;
-
+ end;
 END;
 
 ```
