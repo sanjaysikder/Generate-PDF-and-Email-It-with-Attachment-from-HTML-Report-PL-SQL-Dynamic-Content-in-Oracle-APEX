@@ -198,8 +198,7 @@ function generatePDFWithSendEmail() {
    - **Action Type**: `Execute server-side Code`
    - **Code**:
      
-     ```pl/sql code
-
+ ```pl/sql code
    DECLARE
     email_id    NUMBER;
     l_body_html VARCHAR2(32767);
@@ -220,7 +219,6 @@ function generatePDFWithSendEmail() {
                     p_body_html => l_body_html,
                     p_subj      => 'Hello Test'
                 );
-
     -- Attach files from the collection to the email
     FOR file_rec IN (
         SELECT 
@@ -250,8 +248,7 @@ function generatePDFWithSendEmail() {
     APEX_COLLECTION.TRUNCATE_COLLECTION('GENERATE_PDF');
 END;
 
-
-
+``
 ### 💡 Notes:
 - Ensure the element you want to print has the ID `printID`.
 - `html2pdf.js` must be loaded on the page (see section 2 of the documentation for CDN or static file setup).
@@ -259,7 +256,7 @@ END;
 - Create a Dynamic Action for the button’s click event to call the JavaScript function `Execute JavaScript Code`.
 - Add Another True Action `Execute server-side Code`.
 
----
+
 
 
 # Thank You
