@@ -1,6 +1,6 @@
-# 📄 Generate PDF from HTML Report (PL/SQL Dynamic Content) and Email It with Attachment in Oracle APEX Using a JavaScript Library
+# 📄 Generate-PDF-and-Email-It-with-Attachment-from-HTML-Report-PL-SQL-Dynamic-Content-in-Oracle-APEX
 
-This guide helps you integrate a **"Download Word"** feature in your Oracle APEX application using html2pdf.js.
+This guide helps you integrate a **"Generate PDF and Email it with Attachment"** feature in your Oracle APEX application using html2pdf.js.
 
 ---
 
