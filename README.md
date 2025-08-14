@@ -248,7 +248,7 @@ function generatePDFWithSendEmail() {
     APEX_COLLECTION.TRUNCATE_COLLECTION('GENERATE_PDF');
 END;
 
-``
+```
 ### 💡 Notes:
 - Ensure the element you want to print has the ID `printID`.
 - `html2pdf.js` must be loaded on the page (see section 2 of the documentation for CDN or static file setup).
