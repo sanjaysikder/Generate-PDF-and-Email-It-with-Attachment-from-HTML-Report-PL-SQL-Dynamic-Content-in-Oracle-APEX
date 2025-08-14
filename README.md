@@ -197,12 +197,13 @@ function generatePDFWithSendEmail() {
 4. **Add Another True Action**
    - **Action Type**: `Execute server-side Code`
    - **Code**:
+     
      ```pl/sql code
 
-     DECLARE
+   DECLARE
     email_id    NUMBER;
     l_body_html VARCHAR2(32767);
-BEGIN
+   BEGIN
     -- Email HTML Body
     l_body_html := 
         '<html>
@@ -211,7 +212,6 @@ BEGIN
              <p>This is a static email sent from APEX.</p>
            </body>
          </html>';
-
     -- Send Email
     email_id := APEX_MAIL.SEND(
                     p_to        => 'sanjaysikder71@gmail.com',
@@ -251,7 +251,6 @@ BEGIN
 END;
 
 
-     ```
 
 ### 💡 Notes:
 - Ensure the element you want to print has the ID `printID`.
